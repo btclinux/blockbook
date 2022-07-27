@@ -47,9 +47,10 @@ RUN \
     trap cleanup EXIT && \
     mkdir -p $GOPATH/src/github.com/trezor && \
     cd $GOPATH/src/github.com/trezor && \
-    git clone https://github.com/btclinux/blockbook.git && \
+    git clone https://github.com/trezor/blockbook.git && \
     cd blockbook && \
     go mod download
+    go get github.com/btclinux/blockbook/bchain/coins/ufo
 
 ADD Makefile /build/Makefile
 

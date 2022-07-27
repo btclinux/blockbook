@@ -49,7 +49,7 @@ RUN \
     cd $GOPATH/src/github.com/trezor && \
     git clone https://github.com/trezor/blockbook.git && \
     cd blockbook && \
-    go mod download
+    go mod download && \
     go get github.com/btclinux/blockbook/bchain/coins/ufo
 
 ADD Makefile /build/Makefile
